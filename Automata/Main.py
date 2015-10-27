@@ -1,10 +1,12 @@
 __author__ = 'perar'
 
 from bottle import route, run, template
+from Automata.TaskGenerator import TaskGenerator
+import json
 
-@route('/hello/<name>')
-def index(name):
-    return template('<b>Hello {{name}}</b>!', name=name)
+@route('/tasks/list')
+def index():
+    return "<pre>" + json.dumps(TaskGenerator.load(), sort_keys=True, indent=4, separators=(',', ': ')) + "</pre>"
 
 
 
@@ -14,4 +16,5 @@ def index(name):
 
 
 if __name__ == '__main__':
+
     run(host='localhost', port=8080)
