@@ -84,5 +84,3 @@ for x in range(times):
 
 endTime = time.time()
 
-
-print("\nExecuted in {0} seconds.".format(endTime - startTime))
