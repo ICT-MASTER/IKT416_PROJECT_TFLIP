@@ -1,4 +1,4 @@
-__author__ = 'perar'
+__author__ = 'ck10'
 import json
 import random
 
