@@ -1,0 +1,68 @@
+[
+  {
+    "name": "while",
+    "include": ["if","primitives", "variables"],
+    "min_difficulty": "0.3",
+    "max_difficulty": "0.5"
+  },
+  {
+    "name": "for",
+    "include": ["primitives", "variables", "if"],
+    "min_difficulty": "0.2",
+    "max_difficulty": "0.6"
+  },
+  {
+    "name": "if",
+    "include": ["methods", "primitives", "for"],
+    "min_difficulty": "0.1",
+    "max_difficulty": "0.3"
+  },
+  {
+    "name": "for-enhanced",
+    "include": ["for", "variables", "primitives", "if"],
+    "min_difficulty": "0.2",
+    "max_difficulty": "0.4"
+  },
+  {
+    "name": "exceptions",
+    "include": ["primitives", "variables"],
+    "min_difficulty": "0.4",
+    "max_difficulty": "0.7"
+  },
+  {
+    "name": "try-catch",
+    "include": ["exceptions"],
+    "min_difficulty": "0.5",
+    "max_difficulty": "0.7"
+  },
+  {
+    "name": "iterators",
+    "include": ["for", "for-enhanced", "json", "reflection"],
+    "min_difficulty": "0.6",
+    "max_difficulty": "1.0"
+  },
+  {
+    "name": "classes",
+    "include": ["methods", "primitives", "variables"],
+    "min_difficulty": "0.2",
+    "max_difficulty": "0.5"
+  },
+  {
+    "name": "methods",
+    "include": ["classes", "primitives", "variables"],
+    "min_difficulty": "0.3",
+    "max_difficulty": "0.5"
+  },
+  {
+    "name": "primitives",
+    "include": ["variables"],
+    "min_difficulty": "0",
+    "max_difficulty": "0.3"
+  },
+  {
+    "name": "variables",
+    "include": ["primitives"],
+    "min_difficulty": "0",
+    "max_difficulty": "0.3"
+  }
+]
