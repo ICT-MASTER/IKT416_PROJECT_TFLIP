@@ -1,7 +1,7 @@
 __author__ = 'perar'
 
 from bottle import route, run, template
-from Automata.TaskGenerator import TaskGenerator
+from Automata.Generator.TaskGenerator import TaskGenerator
 import json
 
 @route('/tasks/list')

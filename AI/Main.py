@@ -12,14 +12,15 @@ while ans:
 """)
     ans=input("What would you like to do? ")
     if ans=="1":
-        print("\n Students Created")
+        Student_Create.generate()
+        print("\nStudents Created")
     elif ans=="2":
-
-        print("\n Students directory cleaned!")
+        Student_Clean.clean()
+        print("\nStudents directory cleaned!")
     elif ans=="3":
-        print("\n API Status: ")
+        print("\nAPI Status: ")
     elif ans=="4":
-        print("\n Goodbye")
+        print("\nGoodbye")
         exit(1)
     elif ans !="":
-        print("\n Not Valid Choice Try again")
+        print("\nNot Valid Choice Try again")
