@@ -34,9 +34,55 @@ var app = angular
             });
         };
 
+
+        $scope.invert_task = function(task){
+            task[2] = !task[2]
+        };
+
+        $scope.deliver_taskset = function(name, taskset){
+
+            $http({
+                method: 'POST',
+                url: "/api/student/deliver_taskset",
+                data: {
+                    name: name,
+                    taskset: taskset
+                },
+                headers: {'Content-Type': 'application/json'}
+            }).success(function(data)
+            {
+
+                retrieve_taskset(name)
+
+
+            });
+
+        };
+
+
+        var retrieve_taskset = function(key){
+
+            $http.get('/api/student/' + key + '/taskset').success(function(data) {
+
+                $scope.students[key].tags = data.tags;
+                $scope.students[key].matrix = data.matrix;
+                $scope.students[key].taskset = data.taskset
+
+            });
+
+
+        };
+
+
         $scope.students = function(){
             $http.get('/api/students').success(function(data) {
                 $scope.students = data;
+
+                angular.forEach($scope.students, function(value, key){
+                    retrieve_taskset(key)
+                });
+
+
             });
         };
         $scope.students();

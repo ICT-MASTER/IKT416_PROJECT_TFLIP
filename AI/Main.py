@@ -2,8 +2,10 @@ import Student_Create
 import Student_Clean
 import StudentEngine
 import json
+import requests as req
 from libs.bottle import static_file
 from libs.bottle import route, run, template
+from libs.bottle import get, post, request # or route
 
 
 
@@ -22,6 +24,29 @@ def clean_students():
     return json.dumps({
         'message': "OK"
     })
+
+
+@route('/api/student/deliver_taskset', method='POST')
+def deliver_taskset():
+    name = request.json["name"]
+    taskset = request.json["taskset"]
+
+    data = req.post("http://localhost:27000/student/" + name + "/deliver_taskset", json={
+        'taskset': taskset
+    })
+
+    return data.json()
+
+
+
+
+@route('/api/student/<student>/taskset')
+def taskset(student):
+
+    data = req.get("http://localhost:27000/student/{0}/taskset".format(student))
+    return data.json()
+
+
 
 @route('/api/students')
 def create_students():

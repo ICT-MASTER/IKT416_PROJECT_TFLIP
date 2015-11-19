@@ -46,7 +46,7 @@ def load_tag_matrix():
     return tags, tags_matrix
 
 
-def roulette(tags_matrix, decay=None):
+def roulette(tags, tags_matrix, decay=None):
     # If decay is set
     if decay:
 
@@ -99,7 +99,7 @@ def roulette(tags_matrix, decay=None):
         ########################################
         if next_probability <= 0:
             delta_add = np.divide(abs(next_probability), len(reward_cells))
-            tags_matrix[decay[0]][decay[1]] = 0.0000000
+            tags_matrix[decay[0]][decay[1]] = 0.
             reward = np.subtract(reward, delta_add)
         else:
             tags_matrix[decay[0]][decay[1]] = next_probability
@@ -180,7 +180,7 @@ def roulette(tags_matrix, decay=None):
 
 
 # Load the tag_matrix
-tags, tags_matrix = load_tag_matrix()
+#tags, tags_matrix = load_tag_matrix()
 
 
 
@@ -191,25 +191,124 @@ tags, tags_matrix = load_tag_matrix()
 # decay: decay is set in order to decay the probability of an already selected task
 # this is done so the chance of getting the same category + level twice is decreeased
 ########################################
-# Num tasks to generate
-num_tasks = 10
+def generate_tasks(tags, tags_matrix, num_tasks = 10, do_decay=True):
 
-tasks = []
-decay = None
-for i in range(num_tasks):
+    # List of generated tasks
+    tasks = []
+
+    # Decay variable
+    decay = None
+
+    # Create tasks
+    for x in range(num_tasks):
+
+        # Run roulette with decay for a new task
+        task = roulette(tags, tags_matrix, decay)
+
+        if do_decay:
+            decay = task[1]
+            tasks.append((tags[task[1][0]], task[1][1], False))
+
+    print("Matrix sum: " + str(np.sum(tags_matrix)) + " (should be 100.0)")
+    return tasks
 
 
-    # Roulette for a task
-    task = roulette(tags_matrix, decay)
+########################################
+#
+#
+#
+#
+#
+########################################
+def evaluate_matrix(tags, tags_matrix, taskset):
 
-    # Set decay index for next iteration
-    decay = task[1]
+    for task in taskset:
+        task_type = task[0]
+        task_level = task[1]
+        task_passed = task[2]
 
-    # Add task to list of tasks
-    tasks.append((tags[task[1][0]], task[1][1]))
+        # Determine matrix row and column position of the task
+        matrix_row = tags.index(task_type)
+        matrix_column = task_level
+
+        # If task was passed, punish task's position in matrix
+        if task_passed:
+            reward(tags_matrix, matrix_row, matrix_column)
+        # If task was NOT passed, reward task's position in matrix
+        else:
+            punish(tags_matrix, matrix_row, matrix_column)
+
+
+def reward_punish(probability, num_reward):
+    _lambda = 1.0
+    beta = 0.4
+
+    punish = np.multiply( np.multiply(_lambda, beta * (-1)), (100 - probability))
+    reward = np.divide(np.abs(punish), num_reward)
+
+    return reward, punish
 
 
 
-print(tasks)
-print("Matrix sum: " + str(np.sum(tags_matrix)))
+
+
+#########################################################
+#
+# Punish the matrix, lowering total skill by lowing (matrix_row, matrix_column) and increasing  Rows before in same level and (matrix_row, matrix_column - 1)
+#
+#########################################################
+def punish(tags_matrix, matrix_row, matrix_column):
+
+    matrix_probability = tags_matrix[matrix_row][matrix_column]
+
+
+    # All cells in same level, but earlier rows (x < matrix_row)
+    reward_cells = [(x, matrix_column) for x in range(len(tags_matrix)) if x < matrix_row]
+    # If first level give some reward back, if higher then 0 reward previous level instead
+    reward_cells.append((matrix_row, max(0, matrix_column - 1)))
+
+    reward_val, punish_val = reward_punish(matrix_probability, len(reward_cells))
+
+    # Calculate next_probability for (matrix_row, matrix_column)
+    matrix_next_probability = tags_matrix[matrix_row][matrix_column] + punish_val
+
+    print("Failed: (" + str(matrix_row) + "," + str(matrix_column) + ")")
+    print("Punish: " + str(punish_val))
+    print("Reward: " + str(reward_val))
+    print("Next Probability: " + str(matrix_next_probability))
+
+    if matrix_next_probability <= 0:
+        delta_add = np.divide(abs(matrix_next_probability), len(reward_cells))
+        reward_val = np.subtract(reward_val, delta_add)
+        tags_matrix[matrix_row][matrix_column] = 0.
+    else:
+        tags_matrix[matrix_row][matrix_column] = matrix_next_probability
+
+
+    for reward_cell in reward_cells:
+        tags_matrix[reward_cell[0], reward_cell[1]] += reward_val
+
+
+def reward(tags_matrix, matrix_row, matrix_column):
+    matrix_probability = tags_matrix[matrix_row][matrix_column]
+
+    reward_cells = [(x, matrix_column) for x in range(len(tags_matrix)) if x > matrix_row]
+    reward_cells.append((matrix_row, min(0, matrix_column + 1)))
+
+    reward_val, punish_val = reward_punish(matrix_probability, len(reward_cells))
+
+    # Calculate next_probability for (matrix_row, matrix_column)
+    matrix_next_probability = tags_matrix[matrix_row][matrix_column] + punish_val
+
+    if matrix_next_probability <= 0:
+        delta_add = np.divide(abs(matrix_next_probability), len(reward_cells))
+        reward_val = np.subtract(reward_val, delta_add)
+        tags_matrix[matrix_row][matrix_column] = 0.
+    else:
+        tags_matrix[matrix_row][matrix_column] = matrix_next_probability
+
+    for reward_cell in reward_cells:
+        tags_matrix[reward_cell[0], reward_cell[1]] += reward_val
+
+
 

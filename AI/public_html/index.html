@@ -38,7 +38,7 @@
 </nav>
 
 
-<div class="container">
+<div class="col-lg-10 col-lg-offset-1">
 
     <!-- Buttons -->
     <div class="row">
@@ -54,14 +54,44 @@
             <b>{{name}}</b><br/>
             Level: {{student.level}}<br/>
             Experience: {{student.experience}} / {{student.next_level}}<br/>
-            <b>Tags</b><br />
+
+            <b>Skill Matrix</b>
+            <table class="table table-bordered">
+                <tr ng-repeat="row in student.matrix">
+                    <td>{{student.tags[$index]}}</td>
+                    <td ng-repeat="column in row track by $index">{{column | number:2 | number}}</td>
+                </tr>
+            </table>
+
+            <b>Taskset</b>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Level</th>
+                        <th>Passed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="task in student.taskset">
+                        <td>{{task[0]}}</td>
+                        <td>{{task[1]}}</td>
+                        <td ng-click="invert_task(task)" ng-class="task[2] ? 'bg-success' : 'bg-danger'">{{task[2]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-info" ng-click="deliver_taskset(name, student.taskset)">Deliver Taskset</button>
+
+
+
+            <!--<b>Tags</b><br />
             <div class="col-lg-3" ng-repeat="tag in student.tags">
                 <b>{{tag.tag}}</b><br/>
                 Level: {{tag.level}}</br />
                 Failed: {{tag.failed}}<br/>
                 Total: {{tag.total}}<br/>
 
-            </div>
+            </div> -->
 
 
 
