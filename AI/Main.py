@@ -1,26 +1,76 @@
 import Student_Create
 import Student_Clean
+import StudentEngine
+import json
+import requests as req
+from libs.bottle import static_file
+from libs.bottle import route, run, template
+from libs.bottle import get, post, request # or route
 
 
 
-ans=True
-while ans:
-    print ("""1. Generate Students
-2. Clean Students
-3. Check API Connectivity
-4. Exit/Quit
-""")
-    ans=input("What would you like to do? ")
-    if ans=="1":
-        Student_Create.generate()
-        print("\nStudents Created")
-    elif ans=="2":
-        Student_Clean.clean()
-        print("\nStudents directory cleaned!")
-    elif ans=="3":
-        print("\nAPI Status: ")
-    elif ans=="4":
-        print("\nGoodbye")
-        exit(1)
-    elif ans !="":
-        print("\nNot Valid Choice Try again")
+
+@route('/<filename>')
+def server_static(filename):
+    return static_file(filename, root='./public_html')
+
+@route('/api/students')
+def students():
+    pass
+
+@route('/api/clean_students')
+def clean_students():
+    Student_Clean.clean()
+    return json.dumps({
+        'message': "OK"
+    })
+
+
+@route('/api/student/deliver_taskset', method='POST')
+def deliver_taskset():
+    name = request.json["name"]
+    taskset = request.json["taskset"]
+
+    data = req.post("http://localhost:27000/student/" + name + "/deliver_taskset", json={
+        'taskset': taskset
+    })
+
+    return data.json()
+
+
+
+
+@route('/api/student/<student>/taskset')
+def taskset(student):
+
+    data = req.get("http://localhost:27000/student/{0}/taskset".format(student))
+    return data.json()
+
+
+
+@route('/api/students')
+def create_students():
+    return json.dumps(StudentEngine.get_students())
+
+@route('/api/create_students')
+def create_students():
+    Student_Create.generate()
+
+
+    return json.dumps({
+        'message': "OK",
+        'students': StudentEngine.get_students()
+    })
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    run(host='0.0.0.0', port=8080)
+
