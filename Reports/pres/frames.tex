@@ -1,0 +1,121 @@
+\section{Introduction}
+
+
+\begin{frame}
+  \frametitle{About}
+
+  \begin{itemize}
+    \item T-FLIP, Bamboo and unit-testing
+    \item Include an adaptive-learning algorithm
+    \item Fully automated learning system
+    \item Adapts to each individual student
+  \end{itemize}
+\end{frame}
+
+\section{Current status}
+
+
+\begin{frame}
+  \frametitle{Existing solutions and theories}
+
+  \begin{itemize}
+    \item Multiple systems exist
+    \item Based on a whole range of different concepts
+    \item Many papers regarding the theory and different approaches
+  \end{itemize}
+\end{frame}
+
+
+
+
+\section{Solution}
+
+
+\begin{frame}
+  \frametitle{Research question}
+    \\
+    \\
+    \begin{block}{Research question}
+        The project aims to research if the bandit-algorithm or a descendant of this algorithm can be used to improve the learning rate / efficiency of students in a programming class.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Proposed solution}
+
+  \begin{itemize}
+    \item Bandit-algorithm approach
+    \item Rebuilt to find several optimals
+    \item Combined with a student AI
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Algorithm}
+
+  \begin{itemize}
+    \item A matrix representing the students knowledge
+    \item Punish and reward
+  \end{itemize}
+
+\begin{columns}
+    \begin{column}{.50\textwidth}
+        \begin{figure}[!htb]
+            \footnotesize
+            \arraycolsep=3pt
+            \medmuskip = 1mu % default: 4mu plus 2mu minus 4mu
+
+                \begin{bmatrix}
+                    \textbf{0.8} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    \textbf{0.1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    \textbf{0.1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    \end{bmatrix}
+    \centering
+    \caption{Original / Starting state}
+  \end{figure}
+\end{column}
+
+\begin{column}{.49\textwidth}
+    \begin{figure}[!htb]
+
+        \footnotesize
+        \arraycolsep=3pt
+        \medmuskip = 1mu % default: 4mu plus 2mu minus 4mu
+
+            \begin{bmatrix}
+                0.56 & \textbf{0.03} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.13} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.03} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.03} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.03} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.03} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.13} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \textbf{0.03} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+            \end{bmatrix}
+
+            \centering
+            \caption{Iteration 2 of roulette()}
+             \label{fig:matrix_it_2}
+             \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Student}
+    \begin{itemize}
+        \item Unclear at the moment, several approaches.
+        \item Learning automata..
+        \item Static percentage..
+        \item Calculate probabilities based on solved tasks
+      \end{itemize}
+
+\end{frame}
