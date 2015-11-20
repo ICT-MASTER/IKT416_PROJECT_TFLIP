@@ -5,47 +5,6 @@ import numpy as np
 
 
 
-
-loll = None
-
-def load_tag_matrix():
-    # List of all the tags (IE: while, for)
-    tags = []
-
-    # Matrix with all probabilities
-    tags_matrix = None
-
-    # Open the tags matrix
-    with open("data.csv", "r") as file:
-
-        # Read all lines
-        lines = file.readlines()
-
-        # Determine number of columns in matrix
-        matrix_columns = len(lines[0].split(",")) - 1
-
-        # Determine number of rows in matrix
-        matrix_rows = len(lines) - 1
-
-        # Define matrix
-        tags_matrix = numpy.zeros((matrix_rows, matrix_columns))
-
-        # Populate matrix
-        x = 0
-        for row in lines[1:]:
-            columns = row.split(";")
-
-            tags.append(columns[0])
-
-            y = 0
-            for column in columns[1:]:
-                tags_matrix[x][y] = column
-
-                y += 1
-            x += 1
-    return tags, tags_matrix
-
-
 def roulette(tags, tags_matrix, decay=None):
     # If decay is set
     if decay:

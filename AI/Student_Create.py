@@ -2,6 +2,7 @@ import os
 
 def generate():
 
+    num = 5
     student_names = []
 
     # Read all student names
@@ -17,15 +18,22 @@ def generate():
         print("Directory already exists.")
 
     # Create all student directories
+    counter = 0
     for student_name in student_names:
         student_dir = './Students/' + student_name
         student_task_dir = './Students/' + student_name + "/Tasks"
+
+
 
         if try_mkdir(student_dir):
             try_mkdir(student_task_dir)
         else:
             print("Student \"{0}\" already exists.".format(student_name))
 
+        counter += 1
+
+        if counter is num:
+            break
 
 
 def try_mkdir(path):
