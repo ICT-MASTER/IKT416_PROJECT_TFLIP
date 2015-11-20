@@ -22,7 +22,7 @@ def load_tag_matrix():
         lines = file.readlines()
 
         # Determine number of columns in matrix
-        matrix_columns = len(lines[0].split(";")) - 1
+        matrix_columns = len(lines[0].split(",")) - 1
 
         # Determine number of rows in matrix
         matrix_rows = len(lines) - 1
@@ -55,7 +55,7 @@ def roulette(tags, tags_matrix, decay=None):
         #
         #
         ########################################
-        _lambda = 1.0
+        _lambda = 0.10
         beta = 0.4
 
         ########################################
@@ -81,28 +81,15 @@ def roulette(tags, tags_matrix, decay=None):
         ########################################
         #
         # Calculate punish and reward value
-        # * punish = λ * -β * (1 - probability)
-        # * reward = |punish| / len(reward_cells)
+        # * new_p = λ * -β * (-p)
+        # * reward = diff_p / len(reward_cells)
         #
         ########################################
-        punish = np.multiply( np.multiply(_lambda, beta * (-1)), (100 - probability))
-        reward = np.divide(np.abs(punish), len(reward_cells))
+        new_probability = probability + (_lambda * beta * -probability)
+        diff_probability = probability - new_probability
+        reward = diff_probability / len(reward_cells)
 
-        # Calculate next_probability for decay
-        next_probability = tags_matrix[decay[0]][decay[1]] + punish
-
-        ########################################
-        #
-        # Mechanism which handles cases where next_probability is <= 0
-        # What it does is to remove the value which is below zero and subtract it from rest of the reward cells.
-        #
-        ########################################
-        if next_probability <= 0:
-            delta_add = np.divide(abs(next_probability), len(reward_cells))
-            tags_matrix[decay[0]][decay[1]] = 0.
-            reward = np.subtract(reward, delta_add)
-        else:
-            tags_matrix[decay[0]][decay[1]] = next_probability
+        tags_matrix[decay[0]][decay[1]] = new_probability
 
         ########################################
         #
