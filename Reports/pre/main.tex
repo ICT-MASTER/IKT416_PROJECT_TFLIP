@@ -1,0 +1,96 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{import}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{capt-of}
+\usepackage[font=scriptsize]{caption}
+\usepackage{tocloft}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{biblatex}
+
+\pagenumbering{arabic}
+
+
+
+\addbibresource{biblo.bib}
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+
+
+%\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+%\titleformat{\paragraph}[block]{\bfseries\filcenter}{}{1em}{}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\newcommand\myworries[1]{\textcolor{red}{#1}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\inlinecode}{\texttt}
+\newcommand*{\blankpage}{%
+  \vspace*{\fill}
+  \begin{center}
+      This page is left intentionally blank.
+  \end{center}
+  \vspace{\fill}%
+
+  \clearpage
+}
+
+ 
+
+
+\begin{document}
+
+    % Table of content line spacing
+    \setlength\cftparskip{0pt}
+    \setlength\cftbeforesecskip{10pt}
+    \setlength\cftbeforesubsecskip{2pt}
+    \setlength\cftaftertoctitleskip{22pt}
+
+    % Title Page (0)
+    \input{./title.tex}
+    \clearpage
+    
+    % Blank Page (1)
+    \blankpage
+
+    % Table of contents (3)
+    \tableofcontents
+
+    \clearpage
+
+
+        
+      % Content Page (0)
+    \input{./content.tex}
+    \clearpage
+    
+
+    \printbibliography
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
