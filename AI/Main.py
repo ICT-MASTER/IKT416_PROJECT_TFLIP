@@ -35,6 +35,7 @@ def deliver_taskset():
         'taskset': taskset
     })
 
+    print(data)
     return data.json()
 
 
