@@ -26,65 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="839180c8-accf-4fc8-aed1-509c3d200c99" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/T-FLIP-Behovbasert-Laering.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Students/Bobbie Prevost.p" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Students/Curt Baran.p" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Students/Gertrude Mcclenny.p" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Students/Janelle Arguello.p" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Students/Lillian Littlefield.p" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Students/Per-Arne.p" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/changelog.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/browser/bluebird.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/browser/bluebird.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/any.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/assert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/async.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/bind.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/bluebird.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/call_get.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/cancel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/catch_filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/context.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/debuggability.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/direct_resolve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/each.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/errors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/es5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/finally.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/generators.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/join.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/method.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/nodeback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/nodeify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/promise_array.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/promisify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/props.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/queue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/race.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/reduce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/schedule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/settle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/some.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/synchronous_inspection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/thenables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/timers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/using.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/release/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/bluebird/package.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_test.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/data.csv" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/matrix.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adaptive-Learning/Student.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adaptive-Learning/Student/Student.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Hobbit.py" afterPath="$PROJECT_DIR$/Adaptive-Learning/simulation_manager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI/Main.py" afterPath="$PROJECT_DIR$/AI/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI/Student_Create.py" afterPath="$PROJECT_DIR$/AI/Student_Create.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Main.py" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_base.py" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py" afterPath="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adaptive-Learning/Main.py" afterPath="$PROJECT_DIR$/Adaptive-Learning/Main.py" />
     </list>
     <ignored path="Prosjekt.iws" />
@@ -98,6 +46,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Prosjekt$Main.coverage" NAME="Simulation Coverage Results" MODIFIED="1448233111299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Adaptive-Learning" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -106,7 +57,66 @@
     <favorites_list name="Prosjekt" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+              <folding>
+                <element signature="e#21#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Student.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.0701754">
+              <caret line="119" column="25" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simulation_manager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Adaptive-Learning/simulation_manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.859649">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hobbit_hood_sceptical.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.0701754">
+              <caret line="56" column="26" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hobbit_hood_base.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3548387">
+              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,8 +136,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/simulation_manager.py" />
         <option value="$PROJECT_DIR$/Adaptive-Learning/Student/Student.py" />
+        <option value="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py" />
+        <option value="$PROJECT_DIR$/Adaptive-Learning/simulation_manager.py" />
+        <option value="$PROJECT_DIR$/Adaptive-Learning/Student.py" />
         <option value="$PROJECT_DIR$/Adaptive-Learning/Main.py" />
+        <option value="$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_base.py" />
       </list>
     </option>
   </component>
@@ -135,6 +150,13 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
@@ -229,24 +251,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Prosjekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Prosjekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Adaptive-Learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -284,20 +288,42 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Runtime\nodejs\node.exe" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning\Student" />
       <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning\Algorithms" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning" />
       <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning\Algorithms\Hobbit_Hood\Students" />
       <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning\Algorithms\Hobbit_Hood" />
       <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning\Generator" />
       <recent name="C:\Users\perar\Desktop\Prosjekt\Adaptive-Learning\Algorithms" />
-      <recent name="C:\Users\perar\Desktop\Prosjekt\Automata\Algorithms" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Simulation">
+    <configuration default="false" name="Simulation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:/Runtime/Anaconda3/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Adaptive-Learning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Prosjekt" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Adaptive-Learning/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -894,50 +920,61 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.Simulation" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.Simulation" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="839180c8-accf-4fc8-aed1-509c3d200c99" name="Default" comment="" />
       <created>1448223105629</created>
       <option name="number" value="Default" />
       <updated>1448223105629</updated>
-      <workItem from="1448223107178" duration="824000" />
+      <workItem from="1448223107178" duration="9980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="824000" />
+    <option name="totallyTimeSpent" value="9980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -945,11 +982,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Adaptive-Learning/Main.py</url>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -1035,14 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Generator/Tasks/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1083,34 +1107,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Student/Student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Hobbit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/matrix.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1163,29 +1163,157 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/matrix.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="e#21#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Student.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0701754">
+          <caret line="119" column="25" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/simulation_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.859649">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0701754">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.3548387">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive-Learning/Algorithms/Hobbit_Hood/hobbit_hood_sceptical.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Anaconda 3 (C:\Runtime\Anaconda3\python.exe) interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Prosjekt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3521289" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

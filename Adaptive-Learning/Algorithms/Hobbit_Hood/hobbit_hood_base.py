@@ -1,5 +1,6 @@
 import numpy as np
 import random
+import os
 
 
 
@@ -20,16 +21,15 @@ class hobbit_hood_base:
 
         self._load()
 
-        self.roulette(_decay=True)
-
 
     def _load(self):
+        matrix_file_path = os.path.dirname(os.path.realpath(__file__)) + "\\" + self.matrix_file
         # Determine number of columns
-        with open(self.matrix_file) as f:
+        with open(matrix_file_path) as f:
             ncols = len(f.readline().split(','))
             self.categories = [row.split(',')[0] for row in f.readlines()]
 
-        self.matrix = np.loadtxt(self.matrix_file, delimiter=',', skiprows=1, usecols=range(1, ncols))
+        self.matrix = np.loadtxt(matrix_file_path, delimiter=',', skiprows=1, usecols=range(1, ncols))
 
     def reward(self, cell):
         raise NotImplementedError("reward is not implemented!")
@@ -46,6 +46,13 @@ class hobbit_hood_base:
         # Calculate reward cells
         reward_cells = [(x, punish_cell[1]) for x in range(len(self.matrix)) if x > punish_cell[0] and x <= punish_cell[0] + num_x]
         reward_cells.extend([(punish_cell[0], y) for y in range(len(self.matrix[punish_cell[0]])) if y > punish_cell[1] and y <= punish_cell[1] + num_y])
+
+
+        # TODO not sure if CORRECT
+        if len(reward_cells) is 0:
+            reward_cells.append(punish_cell)
+
+
 
         # Calculate new probability for punished cell
         old_probability = self.matrix[punish_cell[0]][punish_cell[1]]
@@ -78,6 +85,7 @@ class hobbit_hood_base:
 
         # Decay if _decay activated
         if _decay:
+
             self.decay(selected[1])
 
         return selected

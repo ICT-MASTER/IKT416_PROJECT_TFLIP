@@ -1,5 +1,4 @@
-from hobbit_hood_base import hobbit_hood_base
-
+from .hobbit_hood_base import hobbit_hood_base
 
 class hobbit_hood_sceptical(hobbit_hood_base):
 
@@ -8,6 +7,10 @@ class hobbit_hood_sceptical(hobbit_hood_base):
 
         self.taskset = None
         self.generate_taskset()
+
+    # Determine cell of task based on ('while', 0)
+    def cell_of(self, task):
+        return self.categories.index(task[0]), task[1]
 
 
     def generate_taskset(self, num_tasks = 10, do_decay = True):
