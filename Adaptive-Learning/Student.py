@@ -25,10 +25,14 @@ class Student:
         self.hobbit = api.assign_hobbit()
         self.ensure_hobbit()
 
-    def request_taskset(self):
+    def request_taskset(self, num=10):
         self.ensure_hobbit()
-        return self.hobbit.generate_taskset()
+        return self.hobbit.generate_taskset(num_tasks=num, do_decay=False)
 
+
+    def get_taskset(self):
+        self.ensure_hobbit()
+        return self.hobbit.taskset
 
     def deliver_taskset(self, answer):
         self.hobbit.evaluate_taskset(answer)

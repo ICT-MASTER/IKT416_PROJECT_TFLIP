@@ -37,6 +37,28 @@ class hobbit_hood_base:
     def punish(self, cell):
         raise NotImplementedError("punish is not implemented!")
 
+    def get_skill(self):
+
+        num_categories = len(self.matrix)
+        count = 0
+        skill = 0
+
+        for y in range(len(self.matrix[0])):
+            for x in range(len(self.matrix)):
+                count += 1
+                cell = self.matrix[x][y]
+                cell_difficulty = (count / num_categories)
+                skill += ((cell/100) * cell_difficulty)
+
+        return skill
+
+
+
+
+
+
+
+
     def decay(self, punish_cell):
 
         # Determine number of cells to reward, punished value

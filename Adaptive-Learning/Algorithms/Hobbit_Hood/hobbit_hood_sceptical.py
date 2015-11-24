@@ -6,7 +6,15 @@ class hobbit_hood_sceptical(hobbit_hood_base):
         hobbit_hood_base.__init__(self)
 
         self.taskset = None
-        self.generate_taskset()
+
+
+        self.beta = 1.0
+        self._lambda = 0.9
+
+        self.decay_num_x = 1
+        self.decay_num_y = 1
+
+
 
     # Determine cell of task based on ('while', 0)
     def cell_of(self, task):
@@ -45,14 +53,15 @@ class hobbit_hood_sceptical(hobbit_hood_base):
         # Determine number of cells to reward, punished value
         num_x =  self.decay_num_x
         num_y = self.decay_num_y
-
         # Calculate reward cells
         reward_cells = [(x, cell[1]) for x in range(len(self.matrix)) if x < cell[0] and x >= cell[0] - num_x]
         reward_cells.extend([(cell[0], y) for y in range(len(self.matrix[cell[0]])) if y < cell[1] and y >= cell[1] - num_y])
 
+
         # No reward cells. cannot punish.
         if len(reward_cells) == 0:
             return
+
 
         # Calculate new probability for punished cell
         old_probability = self.matrix[cell[0]][cell[1]]

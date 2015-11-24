@@ -24,36 +24,34 @@ for x in range(num_students):
         student.deliver_taskset(answer)
 
 
-    fig, ax = plt.subplots()
+
+    for x in range(len(student.history_matrix)):
+        fig, ax = plt.subplots()
+
+        for y_line in range(len(student.history_matrix[x])):
+                ax.plot(student.history_matrix[x][y_line], label="{0} - {1}".format(student.hobbit.categories[x], y_line))
+
+        # Now add the legend with some customizations.
+        legend = ax.legend(loc='upper right', shadow=True)
 
 
-    for y_line in range(len(student.history_matrix[0])):
-        ax.plot(student.history_matrix[0][y_line], label="{0} - {1}".format(student.hobbit.categories[0], y_line))
+        # The frame is matplotlib.patches.Rectangle instance surrounding the legend.
+        frame = legend.get_frame()
+        frame.set_facecolor('0.90')
+        # Set the fontsize
+        for label in legend.get_texts():
+            label.set_fontsize('large')
 
-    # Now add the legend with some customizations.
-    legend = ax.legend(loc='upper right', shadow=True)
+        for label in legend.get_lines():
+            label.set_linewidth(1.5)  # the legend line width
 
+        plt.show()
 
-    # The frame is matplotlib.patches.Rectangle instance surrounding the legend.
-    frame = legend.get_frame()
-    frame.set_facecolor('0.90')
-    # Set the fontsize
-    for label in legend.get_texts():
-        label.set_fontsize('large')
-
-    for label in legend.get_lines():
-        label.set_linewidth(1.5)  # the legend line width
 
 
 
     print(student.matrix)
     print(student.hobbit.matrix)
-
-
-    plt.show()
-
-
-
 
 
 
