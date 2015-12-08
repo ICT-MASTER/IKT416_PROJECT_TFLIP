@@ -27,7 +27,7 @@ def get_expectation_matrix():
     return matrix, history_matrix
 
 
-def assign_hobbit():
-    return hh_sceptical()
+def assign_hobbit(hobbit_class):
+    return hobbit_class()
 
 

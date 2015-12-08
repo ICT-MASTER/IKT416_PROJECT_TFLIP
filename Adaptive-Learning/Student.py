@@ -21,13 +21,13 @@ class Student:
         self.static_punish = 10
 
 
-    def assign_hobbit(self):
-        self.hobbit = api.assign_hobbit()
+    def assign_hobbit(self, hobbit_class):
+        self.hobbit = api.assign_hobbit(hobbit_class)
         self.ensure_hobbit()
 
     def request_taskset(self, num=10):
         self.ensure_hobbit()
-        return self.hobbit.generate_taskset(num_tasks=num, do_decay=False)
+        return self.hobbit.generate_taskset(num_tasks=num)
 
 
     def get_taskset(self):
