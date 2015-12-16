@@ -5,15 +5,20 @@ import numpy as np
 class Student:
 
 
-    def __init__(self, id=None):
+    def __init__(self, id=None, static_epsilon=False, static=False, static_percentage=.70):
         # Skill matrix
         self.id = id
         self.matrix = None
         self.history_matrix = None
         self.hobbit = None
 
+        self.static_epsilon = static_epsilon
+
         self.decay = 50
         self.epsilon = 0.30
+
+        self.static = static
+        self.static_percentage = static_percentage
 
         self.n_iterations = 0
 
@@ -50,6 +55,24 @@ class Student:
 
         answer = []
 
+        # If using static percentage for rward
+        if self.static:
+            for task in self.hobbit.taskset:
+                cell = self.hobbit.cell_of(task)
+                self.update_history()
+
+                self.n_iterations += 1
+                if np.random.random() < self.static_percentage:
+                    self.reward(cell)
+                    answer.append((task[0], task[1], True))
+                else:
+                    self.punish(cell)
+                    answer.append((task[0], task[1], False))
+            return answer
+
+
+
+        # Iterate over all tasks in taskset
         for task in self.hobbit.taskset:
             cell = self.hobbit.cell_of(task)
             self.update_history()
@@ -57,10 +80,12 @@ class Student:
             self.n_iterations += 1
 
 
+
+
             # Retrieve epsilon
             epsilon = self.get_epsilon()
 
-            if np.random.random() > epsilon:
+            if np.random.random() < epsilon:
                 # Exploit, Use Knowledge about student's previous successes/fails
 
                 # TODO not any good
@@ -89,7 +114,6 @@ class Student:
                     # Fail
                     answer.append((task[0], task[1], False))
                     self.punish(cell)
-
 
         return answer
 
@@ -147,6 +171,9 @@ class Student:
 
 
     def get_epsilon(self):
+        if self.static_epsilon:
+            return self.epsilon
+
         """Produce epsilon"""
         total = np.sum(self.n_iterations)
         return float(self.decay) / (total + float(self.decay))

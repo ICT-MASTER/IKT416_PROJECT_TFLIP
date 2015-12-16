@@ -1,5 +1,5 @@
-from Algorithms.Hobbit_Hood.hobbit_hood_base import hobbit_hood_base as hh_base
-from Algorithms.Hobbit_Hood.hobbit_hood_sceptical import hobbit_hood_sceptical as hh_sceptical
+from Algorithms.Hobbit.hobbit import hobbit_base as hh_base
+from Algorithms.Hobbit.hobbit_sceptical import hobbit_sceptical as hh_sceptical
 import numpy as np
 
 
