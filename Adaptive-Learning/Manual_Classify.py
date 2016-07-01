@@ -1,7 +1,7 @@
 from Algorithms.Hobbit.hobbit_sceptical import hobbit_sceptical as hh_sceptical
 from Algorithms.Hobbit.hobbit_ssbt import hobbit_ssbt as hh_ssbt
 import simulation_manager as sm
-from Student import Student
+from StudentModel.Student import Student
 import matplotlib.pyplot as plt
 
 
@@ -23,8 +23,8 @@ for y in range(100):
     for task in student.get_taskset():
         print("----------")
         print("Task is: {0}".format(task))
-        #inp = input("Did you pass?: ")
-        inp = "y"
+        inp = input("Did you pass?: ")
+        #inp = "y"
         if inp is "y":
             cell = student.hobbit.cell_of(task)
             student.reward(cell)

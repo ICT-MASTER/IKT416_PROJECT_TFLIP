@@ -38,7 +38,6 @@ class hobbit_sceptical(hobbit_base):
         reward_cells = reward_cells_x
         reward_cells.extend(reward_cells_y)
 
-
     # No reward cells. cannot punish.
         if len(reward_cells) == 0:
             return
