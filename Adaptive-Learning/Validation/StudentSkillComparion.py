@@ -4,13 +4,17 @@ from StudentModel.Student import Student
 from Algorithms.Hobbit.hobbit_sceptical import hobbit_sceptical as hh_sceptical
 import multiprocessing
 import matplotlib.pyplot as plt
+from xvfbwrapper import Xvfb
+
+vdisplay = Xvfb()
+vdisplay.start()
 
 
 def worker(
         x,
         model,
         num_students=10,
-        num_assignments=10
+        num_assignments=1
 ):
     #print("{0} of {1} | ({2}%)".format(x, num_students, (x/num_students)*100.0))
 
@@ -25,7 +29,7 @@ def worker(
 
     # Request taskset for student
     for y in range(num_assignments):
-        student.request_taskset()
+        student.request_taskset(num=num_assignments)
         answer = student.answer_taskset()
         student.deliver_taskset(answer)
 
@@ -39,7 +43,7 @@ def run(num_students, num_assignments, times):
     skill_data_per_percentage = [0 for x in range(100)]
     skill_data_per_percentage_epsilon_greedy = [0 for x in range(100)]
 
-    pool = multiprocessing.Pool(processes=7)
+    pool = multiprocessing.Pool(processes=20)
 
     n = times
     for i in range(n):
@@ -57,6 +61,7 @@ def run(num_students, num_assignments, times):
     plt.title('Success vs Skill relation. N = ' + str(n))
     plt.grid(True)
     plt.legend().set_visible(False)
-    plt.savefig("StudentSkillComparison.png")
 
+    plt.savefig("StudentSkillComparison.png")
+    vdisplay.stop()
 

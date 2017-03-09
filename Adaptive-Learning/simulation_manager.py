@@ -12,6 +12,7 @@ def get_expectation_matrix():
     y = len(base.matrix[0])
 
     matrix = np.zeros(shape=(x, y))
+    matrix[0][0] = 70
 
 
     # Create history matrix aswell

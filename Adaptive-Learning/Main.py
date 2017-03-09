@@ -5,7 +5,7 @@ import math
 import Validation.StudentRegression as StudentRegression
 import Validation.StaticEpsilonPercent as StaticEpsilonPercent
 import Validation.StudentSkillComparion as StudentSkillComparion
-
+import Validation.StudentRegOld as StudentRegOld
 def drange(start, stop, step):
     r = start
     while r < stop:
@@ -30,16 +30,20 @@ if __name__ == '__main__':
     plt.show()"""
 
 
-    #StudentSkillComparion.run(100, 100, 100)
+    #StudentSkillComparion.run(1000, 1, 1)
 
-
+    #StudentRegOld.run(100, 1000)
     StudentRegression.run(100, 1000)
+    StudentRegression.run(200, 1000)
+    StudentRegression.run(500, 1000)
+
+
 
     # Good Student
-    StaticEpsilonPercent.run(100, 1000, .70)
+    #StaticEpsilonPercent.run(100, 1000, .70)
 
     # Bad Student
-    StaticEpsilonPercent.run(100, 1000, .20)
+    #StaticEpsilonPercent.run(100, 1000, .20)
 
 
 

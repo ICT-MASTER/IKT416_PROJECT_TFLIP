@@ -44,7 +44,7 @@ for y in range(100):
 
     print("Skill: " + str(student.hobbit.get_skill()))
     print("Sum: " + str(student.hobbit.sum()))
-
+    print(student.hobbit.closest_skill_cell())
     print("-------------------------------------------------------------------------------------------------")
 
     for row_label, row in zip([x.ljust(10, " ") for x in student.hobbit.categories], student.matrix):

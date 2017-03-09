@@ -8,7 +8,9 @@ import multiprocessing
 import time
 import matplotlib.pyplot as plt
 
-
+from xvfbwrapper import Xvfb
+vdisplay = Xvfb()
+vdisplay.start()
 
 
 
@@ -18,16 +20,14 @@ def worker(
         set_static_percentage=False,
         no_output=False,
         num_students=10,
-        num_assignments=1,
-        epsilon=.0
+        num_assignments=1
 ):
     # Omit output if true
     if not no_output:
         print("{0} of {1} | ({2}%)".format(x, num_students, (x/num_students)*100.0))
 
     # Initialize a student
-    student = model(id=x, static_epsilon=True )
-    student.epsilon = epsilon
+    student = model(id=x)
 
     #  Set static values if true
     if set_static_percentage:
@@ -40,7 +40,7 @@ def worker(
 
     # Request taskset for student
     for y in range(num_assignments):
-        student.request_taskset(num=num_assignments)
+        student.request_taskset()
         answer = student.answer_taskset()
         student.deliver_taskset(answer)
 
@@ -48,10 +48,10 @@ def worker(
     return student
 
 
-def run(num_assignments, num_students, epsilon):
+def run(num_assignments, num_students):
 
     history_data = []
-    student_models = [Student]
+    student_models = [Student, GoodStudent, BadStudent]
 
 
 
@@ -60,7 +60,7 @@ def run(num_assignments, num_students, epsilon):
 
         start_time = time.time()
         pool = multiprocessing.Pool(processes=20)
-        results = [pool.apply_async(worker, args=(x,model, False, False, num_students, num_assignments, epsilon)) for x in range(num_students)]
+        results = [pool.apply_async(worker, args=(x, model, False, False, num_students, num_assignments)) for x in range(num_students)]
         output = [p.get() for p in results]
 
         for student in output:
@@ -76,7 +76,7 @@ def run(num_assignments, num_students, epsilon):
             for x in range(len(item)):
                 for y in range(len(item[x])):
                     for z in range(len(item[x][y])):
-                        history[x][y][z] += item[x][y][z]
+                        history[x][y][z] += (item[x][y][z] / 100)
 
         for x in range(len(history)):
             for y in range(len(history[x])):
@@ -88,6 +88,8 @@ def run(num_assignments, num_students, epsilon):
 
         charts = []
         for x in range(len(history[0])):
+            plt.xlabel('Tasks')
+            plt.ylabel('Skill Level')
             fig, ax = plt.subplots()
             charts.append((fig, ax))
 
@@ -125,7 +127,7 @@ def run(num_assignments, num_students, epsilon):
             fig, ax = charts[x]
             buf = io.BytesIO()
             fig.savefig(buf, format='png')
-            fig.savefig("./Results/Static_Epsilon_" + str(epsilon) + "_" + str(x) + "_summary.eps", format='eps', dpi=1000)
+            fig.savefig("./Results/" + model.name + "_" + str(x) + "_summary.eps", format='eps', dpi=1000)
             buf.seek(0)
             im = Image.open(buf)
             images.append(im)
@@ -152,4 +154,4 @@ def run(num_assignments, num_students, epsilon):
 
                 count += 1
 
-        new_im.save("./Results/Static_Epsilon_" + str(epsilon) + "_summary.png")
+        new_im.save("./Results/" + model.name + "summary.png")

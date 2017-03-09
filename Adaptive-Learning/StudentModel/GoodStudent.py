@@ -4,13 +4,18 @@ import numpy as np
 
 class GoodStudent:
 
-    name = "GoodStudent_"
-    def __init__(self, id=None, static_epsilon=False, static=False, static_percentage=.70):
+    name = "Good Student (Q Student)"
+    def __init__(self, id=None, static_epsilon=False, static=True, static_percentage=.70):
         # Skill matrix
         self.id = id
         self.matrix = None
         self.history_matrix = None
         self.hobbit = None
+        self.history_skill = []
+        self.winloss = {
+            "win": 0,
+            "loss":0
+        }
 
         self.static_epsilon = static_epsilon
 
@@ -48,7 +53,7 @@ class GoodStudent:
         for x in range(len(self.matrix)):
             for y in range(len(self.matrix[x])):
                 self.history_matrix[x][y].append(self.matrix[x][y])
-
+        self.history_skill.append(self.hobbit.get_skill())
 
     def answer_taskset(self):
         self.ensure_hobbit()

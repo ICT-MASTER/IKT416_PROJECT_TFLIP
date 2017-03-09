@@ -17,7 +17,7 @@ class hobbit_base:
         self._load()
 
     def _load(self):
-        matrix_file_path = os.path.dirname(os.path.realpath(__file__)) + "\\" + self.matrix_file
+        matrix_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), self.matrix_file)
         # Determine number of columns
         with open(matrix_file_path) as f:
             n_cols = len(f.readline().split(','))
@@ -66,7 +66,6 @@ class hobbit_base:
                 cell = self.matrix[x][y]
                 cell_difficulty = (count / num_categories)
                 skill += ((cell/100) * cell_difficulty)
-
         return skill
 
 
@@ -77,4 +76,68 @@ class hobbit_base:
 
     def sum(self):
         return np.sum(self.matrix)
+
+    def cleanup(self):
+        count = 0
+        num_categories = len(self.matrix)
+        skill = self.get_skill()
+
+        for y in range(len(self.matrix[0])):
+            for x in range(len(self.matrix)):
+                count += 1
+                cell_difficulty = (count / num_categories)
+
+
+
+
+
+
+
+    def closest_skill_cell(self):
+        count = 0
+        num_categories = len(self.matrix)
+
+        skill_value = []
+        skill_cell = []
+
+        for y in range(len(self.matrix[0])):
+            for x in range(len(self.matrix)):
+                count += 1
+                cell_difficulty = (count / num_categories)
+
+                skill_value.append(cell_difficulty)
+                skill_cell.append((x,y))
+
+
+        idx = (np.abs(skill_value-self.get_skill())).argmin()
+
+        return skill_cell[idx]
+
+    def cleanup(self):
+        count = 0
+        num_categories = len(self.matrix)
+        closest_cell = self.closest_skill_cell()
+        skill = self.get_skill()
+        for y in range(len(self.matrix[0])):
+            for x in range(len(self.matrix)):
+                count += 1
+                cell_difficulty = (count / num_categories)
+
+                if cell_difficulty + 0.5 < skill and self.matrix[x][y] > .0:
+                    #print("%s | %s => %s" % (self.matrix[x][y], (x,y), closest_cell))
+                    self.matrix[closest_cell[0], closest_cell[1]] += self.matrix[x][y]
+                    self.matrix[x][y] = .0
+
+
+
+
+
+
+
+
+
+
+
+    def avg(self):
+        return np.mean(self.matrix)
 

@@ -4,14 +4,19 @@ import numpy as np
 
 class Student:
 
-    name = "Student_"
+    name = "SBTS Student"
 
     def __init__(self, id=None, static_epsilon=False, static=False, static_percentage=70):
         # Skill matrix
         self.id = id
         self.matrix = None
         self.history_matrix = None
+        self.history_skill = []
         self.hobbit = None
+        self.winloss = {
+            "win": 0,
+            "loss":0
+        }
 
         self.static_epsilon = static_epsilon
 
@@ -51,17 +56,20 @@ class Student:
             for y in range(len(self.matrix[x])):
                 self.history_matrix[x][y].append(self.matrix[x][y])
 
+        self.history_skill.append(self.hobbit.get_skill())
+
 
     def answer_taskset(self):
         self.ensure_hobbit()
 
+        self.hobbit.cleanup()
         answer = []
 
         # If using static percentage for rward
         if self.static:
             for task in self.hobbit.taskset:
                 cell = self.hobbit.cell_of(task)
-                self.update_history()
+
 
                 self.n_iterations += 1
 
@@ -71,6 +79,8 @@ class Student:
                 else:
                     self.punish(cell)
                     answer.append((task[0], task[1], False))
+
+                self.update_history()
             return answer
 
 
@@ -87,6 +97,7 @@ class Student:
 
             # Retrieve epsilon
             epsilon = self.get_epsilon()
+
 
             if np.random.random() < epsilon:
                 # Exploit, Use Knowledge about student's previous successes/fails
